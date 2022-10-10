@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,100&family=Roboto:ital,wght@1,300&display=swap');
+:root{
+    --primary: #F8F8F8;
+    --secondary: #95989A;
+    --text-color: #000;
+    --text-secundary: #BEBEBE;
+}
+
+.contato {
+    color: var(--text-color);
+    text-align: center;
+    font-family: "Montserrat";
+    margin-top: 1.5em;
+}
+
+.contato h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.contato span {
+    color: var(--secondary);
+}
+
+.contato h4 {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+#ultimo-item {
+    margin-bottom: 2em;
+}
+
+#acesso-rapido {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+#icons-rede {
+    font-size: 2em;
+    padding: 10px;
+}
+
+@media (max-width: 909px) {
+
+}
