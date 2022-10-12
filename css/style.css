@@ -9,56 +9,68 @@
 * {
     padding: 0;
     margin: 0;
-    /* font-family: "Montserrat"; */
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
 body{
     color: var(--primary);
 }
 
-#navbar {
+nav {
     width: 100%;
-    display: flex;
     height: 70px;
-    justify-content: space-between;
     background-color:var(--primary);
-    align-items: center;
     color: var(--text-color);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    align-items: center;
+    
 }
 
-.navbartext{
-    width: max-content;
-    font-size: 1.2em;
-    margin-left: 1.5em;
-    font-family: 'Roboto', sans-serif;
+.logo {
+    font-size: 1.5em;
+    padding: 0 50px;
+    line-height: 70px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
 }
 
-.menunavbar{
-    width: max-content;
+nav ul {
+    float: right;
+    margin-right: 20px;
 }
 
-#menu {
-    display: flex;
-    padding: 1em;
+nav ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
 }
 
-.itensmenu{
-    padding: 0.8em;
-    list-style: none;
-}
-
-.itensmenu a {
-    text-decoration: none;
+nav ul li a {
     color: var(--text-color);
     font-size: 1em;
+    padding: 7px 13px;
+    border-radius: 3px;
     text-transform: uppercase;
 }
 
-.itensmenu a:hover{
-    transition: 5s;
-    border-bottom: 1px solid var(--text-color);
+a.active, a:hover {
+    border-bottom: 1px solid black;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: var(--text-color);
+    float: right;
+    line-height: 70px;
+    margin-right: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
 }
 
 /* section apresentação */
@@ -174,9 +186,14 @@ footer p {
     background-size: cover
 }
 
-@media (max-width: 909px) {
-    .navbartext {
-        overflow: hidden;
+@media (max-width: 1000px) {
+    label.logo{
+        font-size: 20px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
     }
 
     .info-text p{
@@ -201,5 +218,41 @@ footer p {
         width: 100%;
         padding: 0;
         margin: 0;
+    }
+}
+
+@media (max-width: 1000px){
+    .checkbtn {
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        background: var(--primary);
+        top: 70px;
+        left: 100%;
+        text-align: center;
+        transition: all .5s;
+        opacity: 0.9;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    nav ul li a.active a:hover{
+        border-bottom: 1px solid #000;
+    }
+    #check:checked ~ ul {
+        left: 0;
     }
 }
