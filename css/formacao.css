@@ -47,4 +47,10 @@
     .section-pdf{
         max-width: 100%;
     }
+
+    .section-pdf span a {
+        visibility: visible;
+        cursor: pointer;
+        color: var(--text-color);
+    }
 }
