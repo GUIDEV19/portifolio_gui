@@ -259,3 +259,9 @@ footer p {
     }
 
 }
+
+@media (max-width: 770px) {
+    label.logo{
+        font-size: 17px;
+    }
+}
